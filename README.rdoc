@@ -1,3 +1,9 @@
+NOTE: This fork is no longer maintained in favor or just doing...
+
+    builder = Product.scoped
+    builder = builder.released.visible # call a couple named scopes to change builder
+    builder = builder.cheap if only_show_cheap_products? # build scopes conditionally
+
 = Scope Builder
 
 Build up named scopes conditionally.
@@ -18,17 +24,17 @@ Rails 2.1 or later required.
 
 == Usage
 
-This gem adds the scope_builder method to all Active Record models. A 
-builder behaves exactly like any other named scope except that calling 
-other named scopes on it will alter the builder itself rather than 
+This gem adds the scope_builder method to all Active Record models. A
+builder behaves exactly like any other named scope except that calling
+other named scopes on it will alter the builder itself rather than
 returning a new named scope.
 
   builder = Product.scope_builder
   builder.released.visible # call a couple named scopes to change builder
   builder.cheap if only_show_cheap_products? # build scopes conditionally
 
-The scope_builder method can also take a block which will return the 
-builder. This is useful when you are using the builder in a model 
+The scope_builder method can also take a block which will return the
+builder. This is useful when you are using the builder in a model
 search method.
 
   # in product model
@@ -52,5 +58,5 @@ This project can be found on github at the following URL.
 
 http://github.com/ryanb/scope-builder/
 
-If you would like to contribute to this project, please fork the 
+If you would like to contribute to this project, please fork the
 repository and send me a pull request.
